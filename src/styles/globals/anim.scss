@@ -1,0 +1,64 @@
+@mixin slideFromTop(){
+    @keyframes slideFromTop {
+        from{
+            transform: translateY(-110%);
+        }
+        to{
+            transform: translateY(0%);
+        }   
+    }
+    animation: slideFromTop 2s forwards;
+}
+
+@mixin slideFromLeft(){
+    @keyframes slideFromLeft {
+        from{
+            transform: translateX(-110%);
+        }
+        to{
+            transform: translateX(0%);
+        }   
+    }
+    animation: slideFromLeft 2s forwards;
+}
+
+@mixin slideFromRight(){
+    @keyframes slideFromRight {
+        from{
+            transform: translateX(110%);
+        }
+        to{
+            transform: translateX(0%);
+        }   
+    }
+    animation: slideFromRight 2s forwards;
+}
+
+@mixin itemFadeIn(){
+    @keyframes itemFadeIn {
+        from{
+            transform: translateY(25%);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0%);
+            opacity: 1;
+        }   
+    }
+    animation: itemFadeIn ease-in 2s forwards;
+}
+
+@mixin transition($value,$action,$thingToMod,$thingToModValue,$op:none,$opv:none){
+    transition: $value;
+    @if $op and $opv != none {
+        @at-root #{selector-unify(&,$action)}{
+            #{$thingToMod}:$thingToModValue;
+            #{$op}:$opv;
+        }  
+    }
+    @else{
+        @at-root #{selector-unify(&,$action)}{
+            #{$thingToMod}:$thingToModValue;
+        }
+    }
+}

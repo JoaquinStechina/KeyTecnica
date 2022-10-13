@@ -1,0 +1,16 @@
+@use "../globals/globals.scss";
+
+.button-container{
+    @include globals.anim-itemFadeIn;
+    @include globals.flex-flex(space-around);
+    padding-top: 30px;
+}
+
+.button{
+    background-color: #f3f2b3;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.5rem;
+    @include globals.anim-transition(transform 0.5s,":hover",transform,scale(1.2),cursor,pointer);
+    padding: 10px 20px;
+}

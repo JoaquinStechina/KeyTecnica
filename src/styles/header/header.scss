@@ -1,0 +1,42 @@
+@use "../globals/globals";
+@forward "./header-li.scss";
+
+.header{
+    background-color: rgb(255, 204, 0);
+    color: rgb(26, 26, 26);
+    font-weight: 700;
+    @include globals.anim-slideFromTop;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header-nav-ul{
+    @include globals.flex-flex;
+    gap: 20px;
+}
+
+@media (min-width: 300px){
+    .header{
+        flex-direction: column;
+        @include globals.flex-flex;
+    }
+
+    .header > *{
+        padding-top: 10px;
+    }
+}
+@media (min-width: 800px){
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .header > *{
+        padding-top: 0px;
+    }
+
+    .header-p{
+        width: 180px;
+        font-size: 1.5rem;
+    }
+}

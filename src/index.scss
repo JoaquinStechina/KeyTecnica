@@ -1,0 +1,21 @@
+@use "./styles/header/header.scss";
+@use "./styles/main/main.scss";
+@use "./styles/footer/footer.scss";
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

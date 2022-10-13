@@ -1,0 +1,5 @@
+@use "../globals/globals"; 
+.header-li{
+    @include globals.anim-transition(transform 0.5s,":hover",transform,translateY(10px));
+    list-style-type: none;
+}
